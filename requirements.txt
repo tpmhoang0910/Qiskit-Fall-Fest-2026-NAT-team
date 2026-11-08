@@ -1,0 +1,13 @@
+# Qiskit Fall Fest 2026 - NAT team: hybrid quantum PPO for UAV trajectory + scheduling
+# Python 3.10 - 3.12
+# Install:  pip install -r requirements.txt
+
+numpy>=1.26,<2.3
+gymnasium>=0.29,<1.2
+matplotlib>=3.8,<3.11
+torch>=2.2,<2.9
+qiskit>=1.2,<2.0
+qiskit-aer>=0.15,<0.17
+qiskit-ibm-runtime>=0.29,<0.37   # only for fake_provider noisy backends
+jupyterlab>=4.0
+ipykernel>=6.25

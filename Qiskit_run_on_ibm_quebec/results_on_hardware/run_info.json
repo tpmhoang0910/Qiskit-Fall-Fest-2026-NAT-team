@@ -1,0 +1,182 @@
+{
+  "algorithm": "Quantum PPO (hardware: IBM ibm_quebec)",
+  "train_cfg": {
+    "gamma": 0.999,
+    "gae_lambda": 0.95,
+    "clip_eps": 0.2,
+    "lr_classical": 0.0003,
+    "lr_quantum": 0.01,
+    "n_layers_vqc": 3,
+    "rollout_steps": 3400,
+    "n_episodes": 272,
+    "policy_epochs": 2,
+    "value_epochs": 2,
+    "n_envs": 68,
+    "pqc_grad_samples": 16,
+    "mini_batch_size": 680,
+    "target_kl": 0.02,
+    "max_grad_norm": 0.5,
+    "ent_coef_user": 0.01,
+    "ent_coef_move": 0.001,
+    "init_log_std": -0.5,
+    "normalize_returns": true,
+    "noise": true,
+    "shots": 512,
+    "p1": 0.001,
+    "p2": 0.01,
+    "p_meas": 0.02,
+    "noise_backend": null,
+    "resample_users": false,
+    "resample_demands": false,
+    "avg_window": 30,
+    "plot_every": 1,
+    "seed": 42,
+    "out_dir": "results_hw",
+    "resume_history_dir": null,
+    "hardware": {
+      "backend": "ibm_quebec",
+      "fake_backend": null,
+      "optimization_level": 3,
+      "seed_transpiler": 1234,
+      "primitive": "estimator",
+      "shots": 512,
+      "resilience_level": 1,
+      "dynamical_decoupling": true,
+      "dd_sequence": "XY4",
+      "twirl_gates": false,
+      "mode": "session",
+      "max_qpu_minutes": 500.0,
+      "eval_on_hardware": false,
+      "n_qubits": 3
+    }
+  },
+  "sys_cfg": {
+    "M": 3,
+    "user_positions": [
+      [
+        20.0,
+        40.0
+      ],
+      [
+        85.0,
+        75.0
+      ],
+      [
+        60,
+        20
+      ]
+    ],
+    "area": 100.0,
+    "H_u": 25.0,
+    "beta0": 6.79e-07,
+    "alpha": 2.5,
+    "B_max": 1000000.0,
+    "noise_psd": 1e-18,
+    "P_max": 3.1622776601683795,
+    "N": 50,
+    "delta": 1.0,
+    "V_max": 10.0,
+    "start": [
+      0.0,
+      0.0
+    ],
+    "end": [
+      100.0,
+      100.0
+    ],
+    "D_min": 90000000.0,
+    "D_max": 130000000.0,
+    "J": 3,
+    "zone_centers": [
+      [
+        60.0,
+        60.0
+      ],
+      [
+        90.0,
+        10.0
+      ],
+      [
+        90,
+        50
+      ]
+    ],
+    "zone_radius": [
+      10.0,
+      6.0,
+      8.0
+    ],
+    "P0": 79.86,
+    "Pi": 88.63,
+    "U_tip": 120.0,
+    "v0": 4.03,
+    "d0": 0.6,
+    "rho": 1.225,
+    "s": 0.05,
+    "A": 0.503,
+    "E_max": 7500.0,
+    "R_norm": 10000000.0,
+    "w_zone": 1.0,
+    "w_energy": 5.0,
+    "w_demand": 30.0,
+    "resample_users": false,
+    "resample_demands": false
+  },
+  "user_xy": [
+    [
+      20.0,
+      40.0
+    ],
+    [
+      85.0,
+      75.0
+    ],
+    [
+      60.0,
+      20.0
+    ]
+  ],
+  "demands_bits": [
+    120958241.94223854,
+    107555137.5900821,
+    124343916.7964553
+  ],
+  "eval_greedy": {
+    "return": 38.320703355612665,
+    "data_Mb": 350.17394648303843,
+    "satisfied": 2,
+    "D_rem_Mb": [
+      2.683349845737461,
+      0.0,
+      0.0
+    ],
+    "E_left": 227.35892164527195,
+    "dist_to_end": 0.0
+  },
+  "n_episodes_done": 10336,
+  "n_updates_done": 300,
+  "hardware": {
+    "backend": "ibm_quebec",
+    "mode": "session",
+    "jobs": 364,
+    "circuits": 135632,
+    "qpu_seconds_used": 27973.24405527115,
+    "eval_greedy_on": "ideal simulator",
+    "settings": {
+      "backend": "ibm_quebec",
+      "fake_backend": null,
+      "optimization_level": 3,
+      "seed_transpiler": 1234,
+      "primitive": "estimator",
+      "shots": 512,
+      "resilience_level": 1,
+      "dynamical_decoupling": true,
+      "dd_sequence": "XY4",
+      "twirl_gates": false,
+      "mode": "session",
+      "max_qpu_minutes": 500.0,
+      "eval_on_hardware": false,
+      "n_qubits": 3
+    }
+  }
+}
